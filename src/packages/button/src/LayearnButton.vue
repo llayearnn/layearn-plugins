@@ -1,11 +1,11 @@
 <template>
   <div>
-    layearn的插件
+    <button>layeran的按钮</button>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'LayearnButton'
+    name: 'LyButton'
   };
 </script>

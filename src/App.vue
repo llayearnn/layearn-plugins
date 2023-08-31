@@ -1,22 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <LayearnButton/>
+    <ly-svg name="phone"></ly-svg>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <LayearnButton @click="Test" />
+    <ly-svg
+      name="phone"
+      style="background-color: red; height: 100px; width: 100px"
+    ></ly-svg>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
- import LayearnButton from './packages/button/src/LayearnButton.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import LayearnButton from "./packages/button/src/LayearnButton.vue";
+// import SvgIcon from "./packages/svg-icon/src/index.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HelloWorld,
-    LayearnButton
-  }
-}
+    LayearnButton,
+    // SvgIcon,
+  },
+  methods: {
+    Test(...args) {
+      console.log("args", args);
+    },
+  },
+};
 </script>
 
 <style>

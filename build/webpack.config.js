@@ -39,25 +39,35 @@ module.exports = {
         },
       },
       {
-        // 处理css文件
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader, //将css文件单独处理
-          "css-loader", //加载css文件
-        ],
-      },
-      {
-        // 处理less
-        test: /\.less$/,
+        // 处理less css
+        test: /\.(css|less)$/,
         // 使用哪些 loader 处理
         use: [
-          MiniCssExtractPlugin.loader,
-          // 将css文件变成commonjs模块加载js中，里面主要是内容样式字符串
+          "style-loader", //加载css文件
           "css-loader",
-          //讲 less 文件编译成呢个css 文件
           "less-loader",
         ],
       },
+      // {
+      //   // 处理css文件
+      //   test: /\.css$/,
+      //   use: [
+      //     MiniCssExtractPlugin.loader, //将css文件单独处理
+      //     "css-loader", //加载css文件
+      //   ],
+      // },
+      // {
+      //   // 处理less
+      //   test: /\.less$/,
+      //   // 使用哪些 loader 处理
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     // 将css文件变成commonjs模块加载js中，里面主要是内容样式字符串
+      //     "css-loader",
+      //     //讲 less 文件编译成呢个css 文件
+      //     "less-loader",
+      //   ],
+      // },
       {
         test: /\.svg$/,
         loader: "svg-sprite-loader",

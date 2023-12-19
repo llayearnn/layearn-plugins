@@ -20,6 +20,9 @@ export default {
       type: String,
       required: true,
     },
+    test: {
+      type: Boolean,
+    },
     color: {
       type: String,
       default: "black",
@@ -51,7 +54,9 @@ export default {
     },
   },
   mounted() {
-    console.log(" props", this.name);
+    // console.log(" props", this.name);
+    console.log(" props-test", this.test);
+    // console.log(" props-test", this.test);
   },
 };
 </script>
